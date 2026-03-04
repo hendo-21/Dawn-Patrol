@@ -1,0 +1,14 @@
+# Ultralytics YOLO 🚀 for SOTA object detection, multi-object tracking, instance segmentation, pose estimation and image classification.
+ultralytics==8.4.19
+
+# Wrapper package for OpenCV python bindings.
+opencv-python==4.13.0.92
+
+# Twilio API client and TwiML generator
+twilio==9.10.2
+
+# Read key-value pairs from a .env file and set them as environment variables
+python-dotenv==1.2.2
+
+# Job scheduling for humans.
+schedule==1.2.2
