@@ -40,3 +40,6 @@ def capture_frame(stream_url: str) -> np.ndarray | None:
     finally:
         # Release the capture
         capture.release()
+
+
+capture_frame('https://live.hdontap.com/hls/hosbdvr6/swellmagnet_malibu-hikvision.stream/chunklist_DVR.m3u8?DVR=&e=1772882448&eh=edge01.nginx.hdontap.com&t=W9CS8VnpPtGlpVqDEEaa2Q')
