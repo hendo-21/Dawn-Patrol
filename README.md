@@ -10,16 +10,10 @@ Daily text messages on surf conditions at my favorite local surf spot. Uses Open
 I wanted to get my hands dirty with some of the open source image capture and object detection models/libraries. My local surf spot can be incredibly crowded, making the 45 minutes of traffic unappealing. This project gives me daily updates on surfer count so I don't have to check local feeds.
 
 ## Tech Stack
-- Frontend: React, Vite, CSS
-- Backend: Python, Flask, SQLAlchemy
-- Database: SQLite
-- Deployment: Fly.io, Docker
-    - Deployed twice: once for myself, once for my partner
+YOLO26, OpenCV
 
 ## Features
-- Add, edit and delete transactions from a ledger.
-- Live-updating summary including editable budget.
-- Persistent data storage.
+- Capture surf break footage from public beach cam video feed
 
 ## Project Structure
 ```
