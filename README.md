@@ -18,20 +18,23 @@ YOLO26, OpenCV
 ## Project Structure
 ```
 dawn-patrol/
-├── frames/          # storage for video frames
+├── frames/          # storage for video frames including raw and annotated captures
 ├── main.py          # entry point / scheduler
-├── capture.py       # webcam frame grabbing
-├── detect.py        # YOLO inference
+├── capture.py       # capture and return a frame from webcame
+├── detect.py        # mask creation, YOLO inference, object counting
 ├── notify.py        # SMS logic
 └── store.py         # logging counts to JSON/SQLite
 ```
 
 ## What I've Learned So Far
 - Hosted video formats (HLS vs MJPEG)
-- OpenCV for frame capture from video 
+- Practical CV tooling (OpenCV, Ultralytics, labelme)
+- Why naive approaches fail on real-world scenes
+- How object detection models work at a conceptual level
+- Tradeoffs between custom model training and using a mask to reduce noise and improve detection
 
 ## Future Improvements
 Wave analysis using inference.
 
 ## License
-[MIT](LICENSE)
+[MIT](LICENSE.md)
