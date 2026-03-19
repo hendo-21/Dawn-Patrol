@@ -16,7 +16,7 @@ PERSON_CLASS_ID = 0
 model = YOLO('yolo26n.pt')
 # model = YOLOE('yoloe-26l-seg.pt')
 # model.set_classes(["person"])
-MODEL_CONF = 0.03
+MODEL_CONF = 0.075
 
 
 def create_mask(image, excluded_area):
@@ -55,6 +55,6 @@ def detect_surfers(frame, excluded_area):
 
                 # Convert tensor values to float tuple: pointPolygonTest precon
                 center_point = (float(x), float(y))
-                if cv.pointPolygonTest(excluded_area, center_point, False) >= 0 and int(box.cls) == PERSON_CLASS_ID:
+                if cv.pointPolygonTest(excluded_area, center_point, False) >= 0 and (int(box.cls) == PERSON_CLASS_ID or int(box.cls) == 14):
                     surfer_ct += 1
     return surfer_ct
