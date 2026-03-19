@@ -33,9 +33,9 @@ def create_mask(image, excluded_area):
     return framed
 
 
-def detect_surfers(frame, excluded_area):
+def detect_surfers(frame, excluded_area, conf=MODEL_CONF):
     file_timestamp = datetime.datetime.now().strftime("%y%m%d-%H%M%S")
-    results = model.predict(frame, conf=MODEL_CONF)
+    results = model.predict(frame, conf=conf)
 
     # Save the annotated frame
     annotated_frame = results[0].plot()
