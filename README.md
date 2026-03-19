@@ -18,11 +18,11 @@ YOLO26, OpenCV
 ## Project Structure
 ```
 dawn-patrol/
-├── frames/          # storage for video frames including raw and annotated captures
-├── main.py          # entry point / scheduler
-├── capture.py       # capture and return a frame from webcame
-├── detect.py        # mask creation, YOLO inference, object counting
-├── notify.py        # SMS logic
+├── .env             # stream url, Pushcut API keys, Pushcut URL, polygon mask path
+├── main.py          # orchestration / count averaging / scheduler
+├── capture.py       # HLS frame capture
+├── detect.py        # masking, polygon filtering, YOLO inferencing 
+├── notify.py        # Pushcut notifications
 └── store.py         # logging counts to JSON/SQLite
 ```
 
@@ -32,9 +32,14 @@ dawn-patrol/
 - Why naive approaches fail on real-world scenes
 - How object detection models work at a conceptual level
 - Tradeoffs between custom model training and using a mask to reduce noise and improve detection
+- Parsing object detection insights to push notification
+- Making HTTP requests with Requests python library
+- Using Pushcut to send iOS notifications
 
 ## Future Improvements
-Wave analysis using inference.
+- Wave analysis using inference.
+- Custom model training for more accurate surfer detection.
+- Attach image capture to Pushcut notification.
 
 ## License
 [MIT](LICENSE.md)
