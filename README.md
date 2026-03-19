@@ -32,6 +32,7 @@ dawn-patrol/
 - Why naive approaches fail on real-world scenes
 - How object detection models work at a conceptual level
 - Tradeoffs between custom model training and using a mask to reduce noise and improve detection
+- Limitations of adjusting model confidence threshold for accurate object detection
 - Parsing object detection insights to push notification
 - Making HTTP requests with Requests python library
 - Using Pushcut to send iOS notifications
