@@ -8,8 +8,9 @@ import requests
 
 def send_notification(surfer_count, api_key, endpoint_url):
     # Send a notification if there's an issue with capture.
-    if surfer_count == 0:
+    if surfer_count is None:
         requests.post(endpoint_url, json={"text": "Could not get surfer count this morning. Check stream for issues."}, headers={"API-Key": api_key})
+        print("Error with frame capture. Check stream URL.")
         return
 
     msg = ""
