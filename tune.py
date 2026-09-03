@@ -17,12 +17,12 @@ import numpy as np
 load_dotenv()
 
 # Load the file with the mask created from Labelme
-with open('frames/raw/new_mask.json', 'r') as file:
+with open("frames/raw/new_mask.json", "r") as file:
     data = json.load(file)
 
 # Get the polygon points and convert to numpy array for use in fillPoly()
 # Open CV method fillPoly() precondition dtype must be signed 32bit int
-points = data['shapes'][0]['points']
+points = data["shapes"][0]["points"]
 EXCLUDED_AREA = np.array(points, dtype=np.int32)
 
 IMG_PATHS = {
@@ -31,9 +31,9 @@ IMG_PATHS = {
     "frames/raw/frame_260319-123524.jpg": 40,
     "frames/raw/frame_260319-122743.jpg": 48,
     "frames/raw/frame_260306-1630.jpg": 4,
-    "frames/raw/frame_260306-1531.jpg": 1
+    "frames/raw/frame_260306-1531.jpg": 1,
 }
-model = YOLO('yolo26n.pt')
+model = YOLO("yolo26n.pt")
 
 
 def main():
@@ -49,11 +49,7 @@ def test_confidence_thresholds(masked_frame):
 
     # Run inference on the frame at each confidence level
     for conf_level in result:
-        result[conf_level] = detect_surfers(
-            masked_frame,
-            EXCLUDED_AREA,
-            conf_level
-        )
+        result[conf_level] = detect_surfers(masked_frame, EXCLUDED_AREA, conf_level)
     return result
 
 

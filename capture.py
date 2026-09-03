@@ -31,8 +31,9 @@ def capture_frame(stream_url: str) -> np.ndarray | None:
         if flag:
             # Save the frame
             cv.imwrite(f"frames/raw/frame_{file_timestamp}.jpg", frame)
-            print(f"✅ Frame read. NumPy array: {frame.shape}. "
-                  f"File name: frame_{file_timestamp}.jpg")
+            print(
+                f"✅ Frame read. NumPy array: {frame.shape}. File name: frame_{file_timestamp}.jpg"
+            )
             return frame
         else:
             print("❌ Failed to read frame.")

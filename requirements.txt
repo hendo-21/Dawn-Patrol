@@ -12,3 +12,6 @@ python-dotenv==1.2.2
 
 # Job scheduling for humans.
 schedule==1.2.2
+
+# Fast Python linter and formatter
+ruff==0.16.6
